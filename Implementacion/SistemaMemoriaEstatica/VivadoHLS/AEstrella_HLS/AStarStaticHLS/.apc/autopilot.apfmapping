@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="aStarStatic.h" path="/home/jose/tfg.jose.jimenez/VivadoHLS/AStarStatic/aStarStatic.h"/>
+    <originFiles name="aStarStatic.cpp" path="/home/jose/tfg.jose.jimenez/VivadoHLS/AStarStatic/aStarStatic.cpp"/>
+  </source>
+  <testbench>
+    <originFiles name="vehicle.txt" path="/home/jose/workspace/AvoidObstaclesStatic/vehicle.txt"/>
+    <originFiles name="result.golden.dat" path="/home/jose/tfg.jose.jimenez/VivadoHLS/AStarStatic/result.golden.dat"/>
+    <originFiles name="map.txt" path="/home/jose/workspace/AvoidObstaclesStatic/map.txt"/>
+    <originFiles name="aStartStatic_test.cpp" path="/home/jose/tfg.jose.jimenez/VivadoHLS/AStarStatic/aStartStatic_test.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

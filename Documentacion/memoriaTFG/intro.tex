@@ -1,0 +1,35 @@
+\pagestyle{fancy}
+\lhead[]{\leftmark}
+\rhead[\rightmark]{}
+
+\chapter{Introducción}
+
+\drop{E}n este \ac{TFG} se pretende aportar una solución a la problemática existente en la detección de obstáculos en tiempo real con vehículos autónomos para entornos cerrados.
+Para acotar un poco el problema se desea conseguir que un vehículo autónomo consiga llegar de un lugar a otro esquivando los obstáculos que aparezcan en su entorno en tiempo real. Esquivar objetos en tiempo real implica que si aparece un nuevo obstáculo en la trayectoria que se ha calculado anteriormente, el sistema será capaz de recalcular la ruta para que el automóvil no colisione y consiga llegar al destino.
+
+Para la detección de obstáculos se utilizará una cámara cenital, de tal manera que, procesando la imagen obtenida se puedan detectar los obstáculos y determinar la trayectoria a realizar por el vehículo. 
+
+Dado que uno de los requisitos es que el vehículo debe ser autónomo, el sistema a desarrollar será el encargado de indicar al coche qué dirección debe tomar para poder llegar desde un punto de origen a un punto de destino. En nuestro sistema, el procesamiento de la imagen y el cálculo de la trayectoria serán realizados por un sistema empotrado híbrido, formado por dos procesadores \acx{ARM} y una \acx{FPGA}, que será el encargado de calcular y enviar la información al automóvil utilizando para ello transmisión inalámbrica. 
+
+Con la información que tenemos hasta ahora podemos observar los siguientes elementos principales en nuestro sistema:
+
+\begin{itemize}
+\item Una \textbf{cámara cenital} se encuentra conectada por cable al computador y se utilizará como herramienta para obtener los datos que procesaremos posteriormente.
+\item Un \textbf{computador}, con hardware reconfigurable, procesará la información obtenida por la cámara, generará una trayectoria y la traducirá en movimientos que se transmitirán de forma inalámbrica al vehículo.
+\item Un \textbf{coche} a la espera de recibir información con el fin de realizar los movimientos necesarios para llegar desde su posición actual a un punto de destino.
+\end{itemize}
+
+\section{Estructura del documento}
+
+A continuación se va a realizar una breve descripción de los capítulos que se van a abordar en este \ac{TFG}:
+
+\begin{definitionlist}
+\item[Capítulo \ref{chap:objetivos}: \nameref{chap:objetivos}] Se concretarán y expondrán los objetivos principales y específicos del \ac{TFG}.
+\item[Capítulo \ref{chap:antecedentes}: \nameref{chap:antecedentes}] Paradigma de los vehículos autónomos y hardware reconfigurable.
+\item[Capítulo \ref{chap:metodología}: \nameref{chap:metodología}] Metodología y herramientas utilizadas para el desarrollo del proyecto.
+\item[Capítulo \ref{chap:desarrollo}: \nameref{chap:desarrollo}] Resolución de los objetivos planteados en este \ac{TFG}.
+\item[Capítulo \ref{chap:resultados}: \nameref{chap:resultados}] Muestra y comparación de los resultados obtenidos en el proyecto.
+\item[Capítulo \ref{chap:conclusiones}: \nameref{chap:conclusiones}] Análisis de los resultados y posibles mejoras.
+\end{definitionlist}
+
+

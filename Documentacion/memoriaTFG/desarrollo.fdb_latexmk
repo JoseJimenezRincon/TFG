@@ -1,0 +1,15 @@
+# Fdb version 3
+["pdflatex"] 1499092590 "desarrollo.tex" "desarrollo.pdf" "desarrollo" 1499092596
+  "/etc/texmf/web2c/texmf.cnf" 1479291447 1101 af7716885e081ab43982cab7b4672c1a ""
+  "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1272929888 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
+  "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm" 1136768653 1328 c834bbb027764024c09d3d2bf908b5f0 ""
+  "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmti10.tfm" 1136768653 1480 aa8e34af0eb6a2941b776984cf1dfdc4 ""
+  "/usr/share/texlive/texmf-dist/web2c/texmf.cnf" 1417527377 31088 8e088e958dd0258cc5414842768a3a00 ""
+  "/usr/share/texmf/web2c/texmf.cnf" 1417527377 31088 8e088e958dd0258cc5414842768a3a00 ""
+  "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1479291735 1561293 ee2f233f6325ee204ca709e796fd06a8 ""
+  "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1479291696 3840968 c3b37916efbb90799465f340e6fa89fd ""
+  "desarrollo.aux" 1485163474 8 a94a2480d3289e625eea47cd1b285758 ""
+  "desarrollo.tex" 1499092590 76653 df86fa0b76981fca77ebbb8665989537 ""
+  (generated)
+  "desarrollo.log"
+  "desarrollo.pdf"

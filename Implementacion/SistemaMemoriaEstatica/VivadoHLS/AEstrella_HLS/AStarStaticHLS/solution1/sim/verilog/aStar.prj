@@ -1,0 +1,12 @@
+verilog xil_defaultlib "aStar_openNodes.v"
+verilog xil_defaultlib "aStar_adjacentPosition_2.v"
+verilog xil_defaultlib "aStar_calculateCost.v"
+verilog xil_defaultlib "aStar.autotb.v"
+verilog xil_defaultlib "aStar_node_heuristic.v"
+verilog xil_defaultlib "aStar.v"
+verilog xil_defaultlib "aStar_node_coordinates_0.v"
+verilog xil_defaultlib "aStar_node_coordinates_1.v"
+verilog xil_defaultlib "AESL_automem_map_r.v"
+verilog xil_defaultlib "aStar_urem_11ns_7ns_11_15_seq.v"
+verilog xil_defaultlib "aStar_adjacentNodes.v"
+

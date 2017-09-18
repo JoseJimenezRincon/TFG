@@ -1,0 +1,37 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+\usepackage{times}
+
+\title{Sistema de control visual empotrado utilizando FPGA para detección de obstáculos}
+\author{Resumen}
+
+\begin{document}
+
+\maketitle
+
+El objetivo principal del proyecto es \textbf{esquivar} \textbf{obstáculos} con un vehículo remoto en \textbf{tiempo} \textbf{real} mediante el uso de \textbf{hardware} \textbf{reconfigurable}. Para poder abordar el proyecto se ha decidido dividir el trabajo en los siguientes subobjetivos:
+
+\begin{enumerate}
+\item \textbf{Detección de obstáculos}. Para poder esquivar los objetos que se encuentran en el entorno es necesario conocer dónde se encuentran.
+\item \textbf{Distinción del vehículo}. Como toda la información del entorno se procesa con una cámara cenital es necesario diferenciar el vehículo del resto de objetos con un rasgo identificativo.
+\item \textbf{Cálculo de trayectoria}. Una vez se conoce el entorno se procede a calcular la trayectoria desde el punto en el que se encuentra el vehículo hasta el destino que decida el usuario.
+\item \textbf{Comunicación}. Es necesario establecer una comunicación entre el hardware reconfigurable que realiza los cálculos y el vehículo que ejecuta los movimientos.
+\item \textbf{Movimientos del vehículo}. Se debe realizar la programación necesaria para realizar los movimientos del vehículo de una forma controlada.
+\item \textbf{Funcionamiento del sistema en tiempo real}. Conseguir que todo el sistema funcione en tiempo real.
+\end{enumerate}
+
+Como resumen acerca de qué logros se han completado en este TFG\footnote{Trabajo de Fin de Grado.} decir que este \textbf{sistema} ha \textbf{conseguido} \textbf{esquivar} \textbf{obstáculos} en \textbf{tiempo real} con un vehículo remoto mediante el uso de \textbf{hardware} \textbf{reconfigurable}. Algunas consideraciónes a tener en cuenta:
+
+\begin{itemize}
+\item El sistema permite \textbf{detectar} la \textbf{aparición} de nuevos \textbf{objetos} en el entorno mientras se están realizando movimientos con el vehículo. De tal forma que se pueda recalcular una nueva trayectoria si ha aparecido o desaparecido un objeto, evitando así colisionar con los obstáculos que aparezcan en el entorno.
+\item Gracias a las optimizaciones realizadas, a causa del uso de hardware reconfigurable, el \textbf{tiempo de ejecución} se ha \textbf{mejorado} \textbf{654,9} veces frente a la ejecución del sistema sin el uso de hardware reconfigurable.
+\item Cabe mencionar que en el grado de Ingeniería Informática cursado en Ciudad Real no existen asignaturas relacionadas con robótica. De tal forma que todo el trabajo realizado ha sido autónomo.
+\end{itemize}
+
+
+
+
+\end{document}

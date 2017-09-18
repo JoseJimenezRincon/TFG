@@ -1,0 +1,113 @@
+@I [HLS-10] Running '/home/jose/tfg/Vivado_HLS/2015.4/bin/unwrapped/lnx64.o/vivado_hls'
+            for user 'jose' on host 'debian' (Linux_x86_64 version 3.16.0-4-amd64) on Fri Jun 30 11:23:11 CEST 2017
+            in directory '/home/jose/tfg.jose.jimenez/VivadoHLS/AStarStatic'
+@I [HLS-10] Opening project '/home/jose/tfg.jose.jimenez/VivadoHLS/AStarStatic/AStarStaticHLS'.
+@I [HLS-10] Adding design file 'aStarStatic.cpp' to the project
+@I [HLS-10] Adding design file 'aStarStatic.h' to the project
+@I [HLS-10] Adding test bench file 'aStartStatic_test.cpp' to the project
+@I [HLS-10] Adding test bench file '../../../workspace/AvoidObstaclesStatic/map.txt' to the project
+@I [HLS-10] Adding test bench file 'result.golden.dat' to the project
+@I [HLS-10] Adding test bench file '../../../workspace/AvoidObstaclesStatic/vehicle.txt' to the project
+@I [HLS-10] Opening solution '/home/jose/tfg.jose.jimenez/VivadoHLS/AStarStatic/AStarStaticHLS/solution1'.
+@I [SYN-201] Setting up clock 'default' with a period of 10ns.
+@I [HLS-10] Setting target device to 'xc7z020clg484-1'
+@I [HLS-10] Analyzing design file 'aStarStatic.cpp' ... 
+@I [HLS-10] Validating synthesis directives ...
+@I [HLS-10] Starting code transformations ...
+@I [HLS-10] Checking synthesizability ...
+@I [XFORM-602] Inlining function 'initNodes' into 'aStar' (aStarStatic.cpp:211) automatically.
+@I [XFORM-602] Inlining function 'openNode' into 'aStar' (aStarStatic.cpp:227) automatically.
+@I [XFORM-602] Inlining function 'calculateFather' into 'aStar' (aStarStatic.cpp:228) automatically.
+@I [XFORM-602] Inlining function 'manhattanHeuristic' into 'aStar' (aStarStatic.cpp:229) automatically.
+@I [XFORM-602] Inlining function 'costPlusHeuristic' into 'aStar' (aStarStatic.cpp:231) automatically.
+@I [XFORM-602] Inlining function 'closeNode' into 'aStar' (aStarStatic.cpp:238) automatically.
+@I [XFORM-102] Partitioning array 'node.coordinates' in dimension 2 automatically.
+@I [XFORM-102] Partitioning array 'adjacentPosition' in dimension 2 automatically.
+@I [XFORM-602] Inlining function 'initNodes' into 'aStar' (aStarStatic.cpp:211) automatically.
+@I [XFORM-602] Inlining function 'openNode' into 'aStar' (aStarStatic.cpp:227) automatically.
+@I [XFORM-602] Inlining function 'calculateFather' into 'aStar' (aStarStatic.cpp:228) automatically.
+@I [XFORM-602] Inlining function 'manhattanHeuristic' into 'aStar' (aStarStatic.cpp:229) automatically.
+@I [XFORM-602] Inlining function 'costPlusHeuristic' into 'aStar' (aStarStatic.cpp:231) automatically.
+@I [XFORM-602] Inlining function 'closeNode' into 'aStar' (aStarStatic.cpp:238) automatically.
+@I [XFORM-401] Performing if-conversion on hyperblock from (aStarStatic.cpp:176:60) to (aStarStatic.cpp:176:54) in function 'calculateBestOption'... converting 3 basic blocks.
+@I [XFORM-602] Inlining function 'calculateBestOption' into 'aStar' (aStarStatic.cpp:236) automatically.
+@I [HLS-111] Elapsed time: 4.90906 seconds; current memory usage: 86 MB.
+@I [HLS-10] Starting hardware synthesis ...
+@I [HLS-10] Synthesizing 'aStar' ...
+@W [SYN-107] Renaming port name 'aStar/map' to 'aStar/map_r' to avoid the conflict with HDL keywords or other object names.
+@I [HLS-10] ----------------------------------------------------------------
+@I [HLS-10] -- Scheduling module 'aStar_adjacentNodes' 
+@I [HLS-10] ----------------------------------------------------------------
+@I [SCHED-11] Starting scheduling ...
+@I [SCHED-11] Finished scheduling.
+@I [HLS-111] Elapsed time: 0.082646 seconds; current memory usage: 86.6 MB.
+@I [HLS-10] ----------------------------------------------------------------
+@I [HLS-10] -- Exploring micro-architecture for module 'aStar_adjacentNodes' 
+@I [HLS-10] ----------------------------------------------------------------
+@I [BIND-100] Starting micro-architecture generation ...
+@I [BIND-101] Performing variable lifetime analysis.
+@I [BIND-101] Exploring resource sharing.
+@I [BIND-101] Binding ...
+@I [BIND-100] Finished micro-architecture generation.
+@I [HLS-111] Elapsed time: 0.034365 seconds; current memory usage: 86.9 MB.
+@I [HLS-10] ----------------------------------------------------------------
+@I [HLS-10] -- Scheduling module 'aStar_calculateCost' 
+@I [HLS-10] ----------------------------------------------------------------
+@I [SCHED-11] Starting scheduling ...
+@I [SCHED-11] Finished scheduling.
+@I [HLS-111] Elapsed time: 0.048492 seconds; current memory usage: 87.1 MB.
+@I [HLS-10] ----------------------------------------------------------------
+@I [HLS-10] -- Exploring micro-architecture for module 'aStar_calculateCost' 
+@I [HLS-10] ----------------------------------------------------------------
+@I [BIND-100] Starting micro-architecture generation ...
+@I [BIND-101] Performing variable lifetime analysis.
+@I [BIND-101] Exploring resource sharing.
+@I [BIND-101] Binding ...
+@I [BIND-100] Finished micro-architecture generation.
+@I [HLS-111] Elapsed time: 0.009452 seconds; current memory usage: 87.1 MB.
+@I [HLS-10] ----------------------------------------------------------------
+@I [HLS-10] -- Scheduling module 'aStar' 
+@I [HLS-10] ----------------------------------------------------------------
+@I [SCHED-11] Starting scheduling ...
+@I [SCHED-11] Finished scheduling.
+@I [HLS-111] Elapsed time: 0.124289 seconds; current memory usage: 88 MB.
+@I [HLS-10] ----------------------------------------------------------------
+@I [HLS-10] -- Exploring micro-architecture for module 'aStar' 
+@I [HLS-10] ----------------------------------------------------------------
+@I [BIND-100] Starting micro-architecture generation ...
+@I [BIND-101] Performing variable lifetime analysis.
+@I [BIND-101] Exploring resource sharing.
+@I [BIND-101] Binding ...
+@I [BIND-100] Finished micro-architecture generation.
+@I [HLS-111] Elapsed time: 0.122409 seconds; current memory usage: 88.9 MB.
+@I [HLS-10] ----------------------------------------------------------------
+@I [HLS-10] -- Generating RTL for module 'aStar_adjacentNodes' 
+@I [HLS-10] ----------------------------------------------------------------
+@I [RTGEN-100] Finished creating RTL model for 'aStar_adjacentNodes'.
+@I [HLS-111] Elapsed time: 0.217093 seconds; current memory usage: 89.5 MB.
+@I [HLS-10] ----------------------------------------------------------------
+@I [HLS-10] -- Generating RTL for module 'aStar_calculateCost' 
+@I [HLS-10] ----------------------------------------------------------------
+@I [RTGEN-100] Finished creating RTL model for 'aStar_calculateCost'.
+@I [HLS-111] Elapsed time: 0.130971 seconds; current memory usage: 91 MB.
+@I [HLS-10] ----------------------------------------------------------------
+@I [HLS-10] -- Generating RTL for module 'aStar' 
+@I [HLS-10] ----------------------------------------------------------------
+@I [RTGEN-500] Setting interface mode on port 'aStar/xStart' to 'ap_none'.
+@I [RTGEN-500] Setting interface mode on port 'aStar/yStart' to 'ap_none'.
+@I [RTGEN-500] Setting interface mode on port 'aStar/xFinish' to 'ap_none'.
+@I [RTGEN-500] Setting interface mode on port 'aStar/yFinish' to 'ap_none'.
+@I [RTGEN-500] Setting interface mode on port 'aStar/map_r' to 'ap_memory'.
+@I [RTGEN-500] Setting interface mode on function 'aStar' to 'ap_ctrl_hs'.
+@I [RTGEN-100] Finished creating RTL model for 'aStar'.
+@I [HLS-111] Elapsed time: 0.163372 seconds; current memory usage: 92.9 MB.
+@I [RTMG-278] Implementing memory 'aStar_openNodes_ram' using block RAMs with power-on initialization.
+@I [RTMG-278] Implementing memory 'aStar_node_coordinates_0_ram' using block RAMs with power-on initialization.
+@I [RTMG-278] Implementing memory 'aStar_node_coordinates_1_ram' using block RAMs with power-on initialization.
+@I [RTMG-278] Implementing memory 'aStar_node_heuristic_ram' using block RAMs with power-on initialization.
+@I [RTMG-278] Implementing memory 'aStar_adjacentPosition_2_ram' using block RAMs with power-on initialization.
+@I [HLS-10] Finished generating all RTL models.
+@I [WSYSC-301] Generating RTL SystemC for 'aStar'.
+@I [WVHDL-304] Generating RTL VHDL for 'aStar'.
+@I [WVLOG-307] Generating RTL Verilog for 'aStar'.
+@I [HLS-112] Total elapsed time: 10.519 seconds; peak memory usage: 92.9 MB.

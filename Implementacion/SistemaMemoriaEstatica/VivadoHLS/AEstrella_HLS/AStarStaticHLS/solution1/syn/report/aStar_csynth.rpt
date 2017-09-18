@@ -1,0 +1,315 @@
+
+
+================================================================
+== Vivado HLS Report for 'aStar'
+================================================================
+* Date:           Fri Jun 30 11:23:20 2017
+
+* Version:        2015.4 (Build 1412921 on Wed Nov 18 09:58:55 AM 2015)
+* Project:        AStarStaticHLS
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|      8.48|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |    ?|    ?|    ?|    ?|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        +--------------------------------+---------------------+-----+-----+-----+-----+---------+
+        |                                |                     |  Latency  |  Interval | Pipeline|
+        |            Instance            |        Module       | min | max | min | max |   Type  |
+        +--------------------------------+---------------------+-----+-----+-----+-----+---------+
+        |grp_aStar_adjacentNodes_fu_684  |aStar_adjacentNodes  |    9|    9|    9|    9|   none  |
+        |grp_aStar_calculateCost_fu_696  |aStar_calculateCost  |    3|    4|    3|    4|   none  |
+        +--------------------------------+---------------------+-----+-----+-----+-----+---------+
+
+        * Loop: 
+        +---------------------------+------+------+-------------+-----------+-----------+------+----------+
+        |                           |   Latency   |  Iteration  |  Initiation Interval  | Trip |          |
+        |         Loop Name         |  min |  max |   Latency   |  achieved |   target  | Count| Pipelined|
+        +---------------------------+------+------+-------------+-----------+-----------+------+----------+
+        |- ForinitNodes             |  6912|  6912|            3|          -|          -|  2304|    no    |
+        |- FOR1                     |    32|    88|    4 ~ 11   |          -|          -|     8|    no    |
+        |- FORcalculateBestOption   |  4608|  4608|            2|          -|          -|  2304|    no    |
+        |- Loop 4                   |     ?|     ?| 4655 ~ 4719 |          -|          -|     ?|    no    |
+        | + FOR2                    |    32|    96|    4 ~ 12   |          -|          -|     8|    no    |
+        | + FORcalculateBestOption  |  4608|  4608|            2|          -|          -|  2304|    no    |
+        |- Loop 5                   |     ?|     ?|            4|          -|          -|     ?|    no    |
+        +---------------------------+------+------+-------------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+-------+
+|       Name      | BRAM_18K| DSP48E|   FF   |  LUT  |
++-----------------+---------+-------+--------+-------+
+|DSP              |        -|      -|       -|      -|
+|Expression       |        -|      -|       0|    878|
+|FIFO             |        -|      -|       -|      -|
+|Instance         |        -|      -|     328|    910|
+|Memory           |       50|      -|       0|      0|
+|Multiplexer      |        -|      -|       -|    650|
+|Register         |        -|      -|     948|      -|
++-----------------+---------+-------+--------+-------+
+|Total            |       50|      0|    1276|   2438|
++-----------------+---------+-------+--------+-------+
+|Available        |      280|    220|  106400|  53200|
++-----------------+---------+-------+--------+-------+
+|Utilization (%)  |       17|      0|       1|      4|
++-----------------+---------+-------+--------+-------+
+
++ Detail: 
+    * Instance: 
+    +--------------------------------+---------------------+---------+-------+-----+-----+
+    |            Instance            |        Module       | BRAM_18K| DSP48E|  FF | LUT |
+    +--------------------------------+---------------------+---------+-------+-----+-----+
+    |grp_aStar_adjacentNodes_fu_684  |aStar_adjacentNodes  |        0|      0|  182|  819|
+    |grp_aStar_calculateCost_fu_696  |aStar_calculateCost  |        0|      0|  146|   91|
+    +--------------------------------+---------------------+---------+-------+-----+-----+
+    |Total                           |                     |        0|      0|  328|  910|
+    +--------------------------------+---------------------+---------+-------+-----+-----+
+
+    * DSP48: 
+    N/A
+
+    * Memory: 
+    +--------------------------+--------------------------+---------+---+----+------+-----+------+-------------+
+    |          Memory          |          Module          | BRAM_18K| FF| LUT| Words| Bits| Banks| W*Bits*Banks|
+    +--------------------------+--------------------------+---------+---+----+------+-----+------+-------------+
+    |adjacentPosition_2_U      |aStar_adjacentPosition_2  |        2|  0|   0|     8|   32|     1|          256|
+    |adjacentPosition_0_U      |aStar_adjacentPosition_2  |        2|  0|   0|     8|   32|     1|          256|
+    |adjacentPosition_1_U      |aStar_adjacentPosition_2  |        2|  0|   0|     8|   32|     1|          256|
+    |node_coordinates_0_U      |aStar_node_coordinates_0  |        2|  0|   0|  2304|    6|     1|        13824|
+    |node_coordinates_1_U      |aStar_node_coordinates_1  |        8|  0|   0|  2304|   32|     1|        73728|
+    |node_father_U             |aStar_node_coordinates_1  |        8|  0|   0|  2304|   32|     1|        73728|
+    |node_cost_U               |aStar_node_coordinates_1  |        8|  0|   0|  2304|   32|     1|        73728|
+    |node_costPlusHeuristic_U  |aStar_node_coordinates_1  |        8|  0|   0|  2304|   32|     1|        73728|
+    |node_heuristic_U          |aStar_node_heuristic      |        8|  0|   0|  2304|   32|     1|        73728|
+    |openNodes_U               |aStar_openNodes           |        1|  0|   0|  2304|    1|     1|         2304|
+    |node_visited_U            |aStar_openNodes           |        1|  0|   0|  2304|    1|     1|         2304|
+    +--------------------------+--------------------------+---------+---+----+------+-----+------+-------------+
+    |Total                     |                          |       50|  0|   0| 18456|  264|    11|       387840|
+    +--------------------------+--------------------------+---------+---+----+------+-----+------+-------------+
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +---------------------------------------------+----------+-------+---+----+------------+------------+
+    |                Variable Name                | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +---------------------------------------------+----------+-------+---+----+------------+------------+
+    |finalPosition_fu_994_p2                      |     +    |      0|  0|  32|          32|          32|
+    |i_1_fu_793_p2                                |     +    |      0|  0|  12|           1|          12|
+    |i_2_fu_916_p2                                |     +    |      0|  0|   4|           4|           1|
+    |i_3_fu_1052_p2                               |     +    |      0|  0|   4|           4|           1|
+    |i_4_fu_971_p2                                |     +    |      0|  0|  12|          12|           1|
+    |i_5_fu_1120_p2                               |     +    |      0|  0|  12|          12|           1|
+    |position_5_fu_822_p2                         |     +    |      0|  0|  32|          32|          32|
+    |tmp1_fu_948_p2                               |     +    |      0|  0|   6|          32|          32|
+    |tmp2_fu_1097_p2                              |     +    |      0|  0|   6|          32|          32|
+    |tmp_1_i1_fu_1103_p2                          |     +    |      0|  0|   6|          32|          32|
+    |tmp_1_i_fu_954_p2                            |     +    |      0|  0|   6|          32|          32|
+    |tmp_28_fu_866_p2                             |     +    |      0|  0|  12|          12|          12|
+    |tmp_29_fu_876_p2                             |     +    |      0|  0|  13|          13|          13|
+    |tmp_30_fu_1216_p2                            |     +    |      0|  0|   6|          13|          13|
+    |tmp_31_fu_1222_p2                            |     +    |      0|  0|   6|          13|          13|
+    |tmp_32_fu_1261_p2                            |     +    |      0|  0|   6|          13|          13|
+    |tmp_33_fu_1267_p2                            |     +    |      0|  0|   6|          13|          13|
+    |tmp_i1_fu_932_p2                             |     +    |      0|  0|  32|          32|          32|
+    |tmp_i5_fu_1081_p2                            |     +    |      0|  0|  32|          32|          32|
+    |y_fu_827_p2                                  |     +    |      0|  0|  32|           1|          32|
+    |grp_fu_708_p2                                |     -    |      0|  0|  32|          32|          32|
+    |grp_fu_713_p2                                |     -    |      0|  0|  32|          32|          32|
+    |grp_fu_743_p2                                |     -    |      0|  0|  32|           1|          32|
+    |grp_fu_763_p2                                |     -    |      0|  0|  32|           1|          32|
+    |bestOption_1_bestOption_i1_fu_1156_p3        |  Select  |      0|  0|  32|           1|          32|
+    |bestOption_1_bestOption_i_fu_1012_p3         |  Select  |      0|  0|  32|           1|          32|
+    |bestOption_2_i1_fu_1172_p3                   |  Select  |      0|  0|  32|           1|          32|
+    |bestOption_2_i_fu_1028_p3                    |  Select  |      0|  0|  32|           1|          32|
+    |grp_fu_755_p3                                |  Select  |      0|  0|  32|           1|          32|
+    |grp_fu_775_p3                                |  Select  |      0|  0|  32|           1|          32|
+    |positionBestOption_2_i1_fu_1164_p3           |  Select  |      0|  0|  32|           1|          32|
+    |positionBestOption_2_i_fu_1020_p3            |  Select  |      0|  0|  32|           1|          32|
+    |positionBestOption_positionBes_1_fu_1149_p3  |  Select  |      0|  0|  32|           1|          32|
+    |positionBestOption_positionBes_fu_1005_p3    |  Select  |      0|  0|  32|           1|          32|
+    |y_1_fu_833_p3                                |  Select  |      0|  0|  32|           1|          32|
+    |exitcond1_fu_910_p2                          |   icmp   |      0|  0|   2|           4|           5|
+    |exitcond_fu_1046_p2                          |   icmp   |      0|  0|   2|           4|           5|
+    |exitcond_i1_fu_965_p2                        |   icmp   |      0|  0|   5|          12|          12|
+    |exitcond_i2_fu_1114_p2                       |   icmp   |      0|  0|   5|          12|          12|
+    |exitcond_i_fu_787_p2                         |   icmp   |      0|  0|   5|          12|          12|
+    |grp_fu_731_p2                                |   icmp   |      0|  0|  11|          32|           2|
+    |grp_fu_749_p2                                |   icmp   |      0|  0|  11|          32|           1|
+    |grp_fu_769_p2                                |   icmp   |      0|  0|  11|          32|           1|
+    |tmp_22_fu_1138_p2                            |   icmp   |      0|  0|  11|          32|          32|
+    |tmp_26_fu_1185_p2                            |   icmp   |      0|  0|  11|          32|           2|
+    |tmp_4_i_fu_799_p2                            |   icmp   |      0|  0|   3|           6|           1|
+    |tmp_5_i_fu_805_p2                            |   icmp   |      0|  0|   5|          12|           1|
+    |tmp_8_i1_fu_1143_p2                          |   icmp   |      0|  0|  11|          32|          32|
+    |tmp_8_i9_fu_999_p2                           |   icmp   |      0|  0|  11|          32|          32|
+    |tmp_9_i_fu_896_p2                            |   icmp   |      0|  0|  11|          32|           1|
+    |grp_fu_737_p2                                |    or    |      0|  0|   1|           1|           1|
+    |or_cond_i_fu_811_p2                          |    or    |      0|  0|   1|           1|           1|
+    +---------------------------------------------+----------+-------+---+----+------------+------------+
+    |Total                                        |          |      0|  0| 878|         764|        1014|
+    +---------------------------------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +----------------------------------+----+-----------+-----+-----------+
+    |               Name               | LUT| Input Size| Bits| Total Bits|
+    +----------------------------------+----+-----------+-----+-----------+
+    |adjacentPosition_0_address0       |   3|          4|    3|         12|
+    |adjacentPosition_0_ce0            |   1|          3|    1|          3|
+    |adjacentPosition_0_ce1            |   1|          2|    1|          2|
+    |adjacentPosition_0_we0            |   1|          2|    1|          2|
+    |adjacentPosition_0_we1            |   1|          2|    1|          2|
+    |adjacentPosition_1_address0       |   3|          4|    3|         12|
+    |adjacentPosition_1_ce0            |   1|          3|    1|          3|
+    |adjacentPosition_1_ce1            |   1|          2|    1|          2|
+    |adjacentPosition_1_we0            |   1|          2|    1|          2|
+    |adjacentPosition_1_we1            |   1|          2|    1|          2|
+    |adjacentPosition_2_address0       |   3|          4|    3|         12|
+    |adjacentPosition_2_ce0            |   1|          3|    1|          3|
+    |adjacentPosition_2_ce1            |   1|          2|    1|          2|
+    |adjacentPosition_2_we0            |   1|          2|    1|          2|
+    |adjacentPosition_2_we1            |   1|          2|    1|          2|
+    |ap_NS_fsm                         |  60|         33|    1|         33|
+    |bestOption_i1_reg_663             |  32|          2|   32|         64|
+    |bestOption_i_reg_605              |  32|          2|   32|         64|
+    |grp_aStar_adjacentNodes_fu_684_x  |  32|          3|   32|         96|
+    |grp_aStar_adjacentNodes_fu_684_y  |  32|          3|   32|         96|
+    |grp_aStar_calculateCost_fu_696_i  |   4|          3|    4|         12|
+    |i1_reg_627                        |   4|          2|    4|          8|
+    |i_i_reg_558                       |  12|          2|   12|         24|
+    |i_reg_570                         |   4|          2|    4|          8|
+    |map_r_address0                    |  12|          4|   12|         48|
+    |map_r_d0                          |  32|          3|   32|         96|
+    |node_coordinates_0_address0       |  12|          5|   12|         60|
+    |node_coordinates_1_address0       |  12|          5|   12|         60|
+    |node_costPlusHeuristic_address0   |  12|          6|   12|         72|
+    |node_costPlusHeuristic_d0         |  32|          4|   32|        128|
+    |node_cost_address0                |  12|          5|   12|         60|
+    |node_cost_ce0                     |   1|          3|    1|          3|
+    |node_cost_d0                      |  32|          3|   32|         96|
+    |node_cost_we0                     |   1|          3|    1|          3|
+    |node_father_address0              |  12|          6|   12|         72|
+    |node_father_ce0                   |   1|          3|    1|          3|
+    |node_father_d0                    |  32|          4|   32|        128|
+    |node_heuristic_address0           |  12|          4|   12|         48|
+    |node_heuristic_d0                 |  32|          4|   32|        128|
+    |node_visited_address0             |  24|          8|   12|         96|
+    |node_visited_d0                   |   1|          3|    1|          3|
+    |openNodes_address0                |  24|          8|   12|         96|
+    |openNodes_d0                      |   1|          3|    1|          3|
+    |position3_reg_617                 |  32|          2|   32|         64|
+    |positionBestOption_1_reg_639      |  12|          2|   12|         24|
+    |positionBestOption_reg_582        |  12|          2|   12|         24|
+    |position_1_reg_675                |  32|          2|   32|         64|
+    |y_i_reg_546                       |  32|          2|   32|         64|
+    +----------------------------------+----+-----------+-----+-----------+
+    |Total                             | 650|        185|  567|       1911|
+    +----------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +------------------------------------------------------+----+----+-----+-----------+
+    |                         Name                         | FF | LUT| Bits| Const Bits|
+    +------------------------------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                                             |  32|   0|   32|          0|
+    |bestOption_i1_reg_663                                 |  32|   0|   32|          0|
+    |bestOption_i_reg_605                                  |  32|   0|   32|          0|
+    |extLd_reg_1462                                        |   6|   0|   32|         26|
+    |finalPosition_reg_1426                                |  32|   0|   32|          0|
+    |grp_aStar_adjacentNodes_fu_684_ap_start_ap_start_reg  |   1|   0|    1|          0|
+    |grp_aStar_calculateCost_fu_696_ap_start_ap_start_reg  |   1|   0|    1|          0|
+    |i1_reg_627                                            |   4|   0|    4|          0|
+    |i_1_reg_1314                                          |  12|   0|   12|          0|
+    |i_2_reg_1347                                          |   4|   0|    4|          0|
+    |i_3_reg_1470                                          |   4|   0|    4|          0|
+    |i_4_reg_1411                                          |  12|   0|   12|          0|
+    |i_5_reg_1534                                          |  12|   0|   12|          0|
+    |i_i_reg_558                                           |  12|   0|   12|          0|
+    |i_reg_570                                             |   4|   0|    4|          0|
+    |node_coordinates_0_addr_1_reg_1442                    |  12|   0|   12|          0|
+    |node_coordinates_0_load_reg_1452                      |   6|   0|    6|          0|
+    |node_coordinates_1_addr_reg_1447                      |  12|   0|   12|          0|
+    |node_coordinates_1_load_reg_1457                      |  32|   0|   32|          0|
+    |or_cond1_reg_1500                                     |   1|   0|    1|          0|
+    |or_cond_i_reg_1319                                    |   1|   0|    1|          0|
+    |or_cond_reg_1377                                      |   1|   0|    1|          0|
+    |position3_reg_617                                     |  32|   0|   32|          0|
+    |positionBestOption_1_reg_639                          |  12|   0|   12|          0|
+    |positionBestOption_i11_cast_reg_1526                  |  12|   0|   32|         20|
+    |positionBestOption_i_cast_reg_1403                    |  12|   0|   32|         20|
+    |positionBestOption_reg_582                            |  12|   0|   12|          0|
+    |position_1_reg_675                                    |  32|   0|   32|          0|
+    |position_3_reg_593                                    |  32|   0|   32|          0|
+    |position_4_reg_650                                    |  32|   0|   32|          0|
+    |position_5_reg_1324                                   |  32|   0|   32|          0|
+    |position_reg_1573                                     |  32|   0|   32|          0|
+    |reg_718                                               |  32|   0|   32|          0|
+    |reg_723                                               |  32|   0|   32|          0|
+    |reg_727                                               |  32|   0|   32|          0|
+    |tmp_17_reg_1352                                       |   4|   0|   64|         60|
+    |tmp_18_reg_1363                                       |  64|   0|   64|          0|
+    |tmp_21_reg_1475                                       |   4|   0|   64|         60|
+    |tmp_23_reg_1486                                       |  64|   0|   64|          0|
+    |tmp_25_reg_1562                                       |  64|   0|   64|          0|
+    |tmp_33_reg_1591                                       |  13|   0|   13|          0|
+    |tmp_i1_reg_1391                                       |  32|   0|   32|          0|
+    |tmp_i5_reg_1514                                       |  32|   0|   32|          0|
+    |x_reg_1304                                            |   6|   0|    6|          0|
+    |y_1_reg_1330                                          |  32|   0|   32|          0|
+    |y_i_reg_546                                           |  32|   0|   32|          0|
+    +------------------------------------------------------+----+----+-----+-----------+
+    |Total                                                 | 948|   0| 1134|        186|
+    +------------------------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++----------------+-----+-----+------------+--------------+--------------+
+|    RTL Ports   | Dir | Bits|  Protocol  | Source Object|    C Type    |
++----------------+-----+-----+------------+--------------+--------------+
+|ap_clk          |  in |    1| ap_ctrl_hs |     aStar    | return value |
+|ap_rst          |  in |    1| ap_ctrl_hs |     aStar    | return value |
+|ap_start        |  in |    1| ap_ctrl_hs |     aStar    | return value |
+|ap_done         | out |    1| ap_ctrl_hs |     aStar    | return value |
+|ap_idle         | out |    1| ap_ctrl_hs |     aStar    | return value |
+|ap_ready        | out |    1| ap_ctrl_hs |     aStar    | return value |
+|ap_return       | out |   32| ap_ctrl_hs |     aStar    | return value |
+|xStart          |  in |   32|   ap_none  |    xStart    |    scalar    |
+|yStart          |  in |   32|   ap_none  |    yStart    |    scalar    |
+|xFinish         |  in |   32|   ap_none  |    xFinish   |    scalar    |
+|yFinish         |  in |   32|   ap_none  |    yFinish   |    scalar    |
+|map_r_address0  | out |   12|  ap_memory |     map_r    |     array    |
+|map_r_ce0       | out |    1|  ap_memory |     map_r    |     array    |
+|map_r_we0       | out |    1|  ap_memory |     map_r    |     array    |
+|map_r_d0        | out |   32|  ap_memory |     map_r    |     array    |
+|map_r_q0        |  in |   32|  ap_memory |     map_r    |     array    |
++----------------+-----+-----+------------+--------------+--------------+
+

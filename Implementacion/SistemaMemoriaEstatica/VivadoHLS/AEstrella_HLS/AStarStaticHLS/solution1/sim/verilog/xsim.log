@@ -1,0 +1,21 @@
+#-----------------------------------------------------------
+# xsim v2015.4 (64-bit)
+# SW Build 1412921 on Wed Nov 18 09:44:32 MST 2015
+# IP Build 1412160 on Tue Nov 17 13:47:24 MST 2015
+# Start of session at: Mon Jun 19 14:15:25 2017
+# Process ID: 10127
+# Current directory: /home/jose/tfg.jose.jimenez/VivadoHLS/AStarStatic/AStarStaticHLS/solution1/sim/verilog
+# Command line: xsim -mode tcl -source {xsim.dir/aStar/xsim_script.tcl}
+# Log file: /home/jose/tfg.jose.jimenez/VivadoHLS/AStarStatic/AStarStaticHLS/solution1/sim/verilog/xsim.log
+# Journal file: /home/jose/tfg.jose.jimenez/VivadoHLS/AStarStatic/AStarStaticHLS/solution1/sim/verilog/xsim.jou
+#-----------------------------------------------------------
+source xsim.dir/aStar/xsim_script.tcl
+# xsim {aStar} -maxdeltaid 10000 -autoloadwcfg -tclbatch {aStar.tcl}
+Vivado Simulator 2015.4
+Time resolution is 1 ps
+source aStar.tcl
+## run all
+$finish called at time : 17911515 ns : File "/home/jose/tfg.jose.jimenez/VivadoHLS/AStarStatic/AStarStaticHLS/solution1/sim/verilog/aStar.autotb.v" Line 521
+run: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:41 . Memory (MB): peak = 249.078 ; gain = 0.000 ; free physical = 172 ; free virtual = 8913
+## quit
+INFO: [Common 17-206] Exiting xsim at Mon Jun 19 14:16:08 2017...

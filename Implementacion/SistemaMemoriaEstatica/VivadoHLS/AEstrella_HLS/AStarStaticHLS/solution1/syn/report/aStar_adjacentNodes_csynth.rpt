@@ -1,0 +1,185 @@
+
+
+================================================================
+== Vivado HLS Report for 'aStar_adjacentNodes'
+================================================================
+* Date:           Fri Jun 30 11:23:20 2017
+
+* Version:        2015.4 (Build 1412921 on Wed Nov 18 09:58:55 AM 2015)
+* Project:        AStarStaticHLS
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|      8.31|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |    9|    9|    9|    9|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+-------+
+|       Name      | BRAM_18K| DSP48E|   FF   |  LUT  |
++-----------------+---------+-------+--------+-------+
+|DSP              |        -|      -|       -|      -|
+|Expression       |        -|      -|       0|    460|
+|FIFO             |        -|      -|       -|      -|
+|Instance         |        -|      -|       -|      -|
+|Memory           |        -|      -|       -|      -|
+|Multiplexer      |        -|      -|       -|    359|
+|Register         |        -|      -|     182|      -|
++-----------------+---------+-------+--------+-------+
+|Total            |        0|      0|     182|    819|
++-----------------+---------+-------+--------+-------+
+|Available        |      280|    220|  106400|  53200|
++-----------------+---------+-------+--------+-------+
+|Utilization (%)  |        0|      0|   ~0   |      1|
++-----------------+---------+-------+--------+-------+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP48: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +------------------------+----------+-------+---+----+------------+------------+
+    |      Variable Name     | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +------------------------+----------+-------+---+----+------------+------------+
+    |initPosition_fu_177_p2  |     +    |      0|  0|  32|          32|          32|
+    |tmp_10_fu_243_p2        |     +    |      0|  0|  32|          32|           2|
+    |tmp_11_fu_249_p2        |     +    |      0|  0|  32|          32|           1|
+    |tmp_14_fu_265_p2        |     +    |      0|  0|  32|          32|           2|
+    |tmp_15_fu_271_p2        |     +    |      0|  0|  32|          32|           1|
+    |tmp_1_fu_221_p2         |     +    |      0|  0|  32|           8|          32|
+    |tmp_2_fu_227_p2         |     +    |      0|  0|  32|           7|          32|
+    |tmp_3_fu_183_p2         |     +    |      0|  0|  32|           8|          32|
+    |tmp_4_fu_190_p2         |     +    |      0|  0|  32|           7|          32|
+    |tmp_5_fu_197_p2         |     +    |      0|  0|  32|           6|          32|
+    |tmp_6_fu_203_p2         |     +    |      0|  0|  32|           7|          32|
+    |tmp_9_fu_215_p2         |     +    |      0|  0|  32|           1|          32|
+    |tmp_s_fu_209_p2         |     +    |      0|  0|  32|           2|          32|
+    |tmp_12_fu_255_p2        |   icmp   |      0|  0|  11|          32|           1|
+    |tmp_13_fu_260_p2        |   icmp   |      0|  0|  11|          32|           6|
+    |tmp_7_fu_233_p2         |   icmp   |      0|  0|  11|          32|           1|
+    |tmp_8_fu_238_p2         |   icmp   |      0|  0|  11|          32|           6|
+    +------------------------+----------+-------+---+----+------------+------------+
+    |Total                   |          |      0|  0| 460|         334|         308|
+    +------------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-----------------------------+----+-----------+-----+-----------+
+    |             Name            | LUT| Input Size| Bits| Total Bits|
+    +-----------------------------+----+-----------+-----+-----------+
+    |adjacentPosition_0_address0  |   3|          7|    3|         21|
+    |adjacentPosition_0_address1  |   3|          6|    3|         18|
+    |adjacentPosition_0_d0        |  64|          8|   32|        256|
+    |adjacentPosition_0_d1        |  64|          8|   32|        256|
+    |adjacentPosition_1_address0  |   3|          6|    3|         18|
+    |adjacentPosition_1_address1  |   3|          5|    3|         15|
+    |adjacentPosition_1_d0        |  64|          9|   32|        288|
+    |adjacentPosition_1_d1        |  64|          9|   32|        288|
+    |adjacentPosition_2_address0  |   6|          8|    3|         24|
+    |adjacentPosition_2_address1  |   6|          8|    3|         24|
+    |adjacentPosition_2_d0        |  32|          6|   32|        192|
+    |adjacentPosition_2_d1        |  32|          6|   32|        192|
+    |ap_NS_fsm                    |  15|         19|    1|         19|
+    +-----------------------------+----+-----------+-----+-----------+
+    |Total                        | 359|        105|  211|       1611|
+    +-----------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +----------------------+----+----+-----+-----------+
+    |         Name         | FF | LUT| Bits| Const Bits|
+    +----------------------+----+----+-----+-----------+
+    |ap_CS_fsm             |  18|   0|   18|          0|
+    |initPosition_reg_297  |  32|   0|   32|          0|
+    |tmp_10_reg_315        |  32|   0|   32|          0|
+    |tmp_11_reg_320        |  32|   0|   32|          0|
+    |tmp_12_reg_325        |   1|   0|    1|          0|
+    |tmp_13_reg_329        |   1|   0|    1|          0|
+    |tmp_14_reg_333        |  32|   0|   32|          0|
+    |tmp_15_reg_339        |  32|   0|   32|          0|
+    |tmp_7_reg_307         |   1|   0|    1|          0|
+    |tmp_8_reg_311         |   1|   0|    1|          0|
+    +----------------------+----+----+-----+-----------+
+    |Total                 | 182|   0|  182|          0|
+    +----------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-----------------------------+-----+-----+------------+---------------------+--------------+
+|          RTL Ports          | Dir | Bits|  Protocol  |    Source Object    |    C Type    |
++-----------------------------+-----+-----+------------+---------------------+--------------+
+|ap_clk                       |  in |    1| ap_ctrl_hs | aStar_adjacentNodes | return value |
+|ap_rst                       |  in |    1| ap_ctrl_hs | aStar_adjacentNodes | return value |
+|ap_start                     |  in |    1| ap_ctrl_hs | aStar_adjacentNodes | return value |
+|ap_done                      | out |    1| ap_ctrl_hs | aStar_adjacentNodes | return value |
+|ap_idle                      | out |    1| ap_ctrl_hs | aStar_adjacentNodes | return value |
+|ap_ready                     | out |    1| ap_ctrl_hs | aStar_adjacentNodes | return value |
+|x                            |  in |   32|   ap_none  |          x          |    scalar    |
+|y                            |  in |   32|   ap_none  |          y          |    scalar    |
+|adjacentPosition_2_address0  | out |    3|  ap_memory |  adjacentPosition_2 |     array    |
+|adjacentPosition_2_ce0       | out |    1|  ap_memory |  adjacentPosition_2 |     array    |
+|adjacentPosition_2_we0       | out |    1|  ap_memory |  adjacentPosition_2 |     array    |
+|adjacentPosition_2_d0        | out |   32|  ap_memory |  adjacentPosition_2 |     array    |
+|adjacentPosition_2_address1  | out |    3|  ap_memory |  adjacentPosition_2 |     array    |
+|adjacentPosition_2_ce1       | out |    1|  ap_memory |  adjacentPosition_2 |     array    |
+|adjacentPosition_2_we1       | out |    1|  ap_memory |  adjacentPosition_2 |     array    |
+|adjacentPosition_2_d1        | out |   32|  ap_memory |  adjacentPosition_2 |     array    |
+|adjacentPosition_0_address0  | out |    3|  ap_memory |  adjacentPosition_0 |     array    |
+|adjacentPosition_0_ce0       | out |    1|  ap_memory |  adjacentPosition_0 |     array    |
+|adjacentPosition_0_we0       | out |    1|  ap_memory |  adjacentPosition_0 |     array    |
+|adjacentPosition_0_d0        | out |   32|  ap_memory |  adjacentPosition_0 |     array    |
+|adjacentPosition_0_address1  | out |    3|  ap_memory |  adjacentPosition_0 |     array    |
+|adjacentPosition_0_ce1       | out |    1|  ap_memory |  adjacentPosition_0 |     array    |
+|adjacentPosition_0_we1       | out |    1|  ap_memory |  adjacentPosition_0 |     array    |
+|adjacentPosition_0_d1        | out |   32|  ap_memory |  adjacentPosition_0 |     array    |
+|adjacentPosition_1_address0  | out |    3|  ap_memory |  adjacentPosition_1 |     array    |
+|adjacentPosition_1_ce0       | out |    1|  ap_memory |  adjacentPosition_1 |     array    |
+|adjacentPosition_1_we0       | out |    1|  ap_memory |  adjacentPosition_1 |     array    |
+|adjacentPosition_1_d0        | out |   32|  ap_memory |  adjacentPosition_1 |     array    |
+|adjacentPosition_1_address1  | out |    3|  ap_memory |  adjacentPosition_1 |     array    |
+|adjacentPosition_1_ce1       | out |    1|  ap_memory |  adjacentPosition_1 |     array    |
+|adjacentPosition_1_we1       | out |    1|  ap_memory |  adjacentPosition_1 |     array    |
+|adjacentPosition_1_d1        | out |   32|  ap_memory |  adjacentPosition_1 |     array    |
++-----------------------------+-----+-----+------------+---------------------+--------------+
+

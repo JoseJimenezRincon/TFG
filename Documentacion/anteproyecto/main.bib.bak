@@ -1,0 +1,101 @@
+%@Article{Bow93,
+%  author = 	 {Bowman, M. and Debray, S.K.and Peterson, L.L.},
+%  title = 	 {Reasoning about naming systems},
+%  journal = 	 {ACM Trans. Program. Lang. Syst.},
+%  year = 	 {1993},
+%  OPTkey = 	 {},
+%  volume = 	 {15},
+%  number = 	 {5},
+%  pages = 	 {795--825},
+%  month = 	 {Nov},
+%}
+%
+%@TechReport{Ding97,
+%  author = 	 {Ding, W. and Marchionini, G.},
+%  title = 	 {A Study on Video Browsing Strategies. Technical Report},
+%  institution =  {University of Maryland at College Park},
+%  year = 	 {1997},
+%}
+
+%@Book{Opencv,
+%  author = 	 {Adrian Kaebler & Gary Bradski},
+%  title = 	 {Learning OpenCv Computer Vision in C++ with the OpenCV Library},
+%  publisher = 	 {O'Reilly},
+%  year = 	 {2012},
+%}
+
+
+%@InProceedings{Frohlic00,
+%  author = 	 {Fr\"ohlich, B. and Plate, J.},
+%  title = 	 {The cubic mouse: a new device for three-dimensional input},
+%  booktitle =    {Proceedings of the SIGCHI Conference on Human Factors in Computing Systems},
+%  year = 	 {2000},
+%  pages = 	 {526-531},
+%  month = 	 {April},
+%  address = 	 {The Hague, The Netherlands},
+%  organization = {ACM},
+%  note = 	 {DOI= \url{http://doi.acm.org/10.1145/332040.332491}},
+%}
+%
+%@Misc{Steele04,
+%  author = 	 {Steele, B.},
+%  title = 	 {Look, Ma, no wires! Cornell class project tests wireless  networking},
+%  howpublished = {\url{http://www.news.cornell.edu/Chronicle/00/5.18.00/wireless_class.html}},
+%  month = 	 {February},
+%  year = 	 {2004},
+%  note = 	 {Cornell Chronicle, 31 from Columbia University},
+%}
+%
+%@Misc{Oxygen,
+%  title = 	 {MIT Project Oxygen: Overview},
+%  howpublished = {\url{http://oxygen.lcs.mit.edu/Overview.html}},
+%  year = 	 {2004},
+%  note = 	 {Computer Science and Artificial Intelligence Laboratory, Massachusetts Institute of Technology},
+%}
+
+@Misc{Zynq,
+    title = 	 {Embedded Processing with the ARM Cortex -A9 on the Xilinx Zynq -7000 All Programmable SoC},
+  howpublished = {\url{http://www.zynqbook.com/download-book.html}},
+  year = 	 {2016},
+  note = 	 {Department of Electronic and Electrical Engineering University of Strathclyde},
+}
+
+@InBook{Edges,
+  author = 	 {J.R.Parker},
+  ALTeditor = 	 {},
+  title = 	 {Algorithms for Image Processing and Computer Vision},
+  chapter = 	 {Edge-Detection Techniques},
+  publisher = 	 {Wiley Publishing, Inc.},
+  year = 	 {2011},
+  address = 	 {Indianapolis, Indiana, USA},
+  pages = 	 {21-84},
+}
+
+@Book{Open,
+  author = 	 {Adrian Kaebler and Gary Bradski},
+  title = 	 {Learning OpenCv Computer Vision in C++ with the OpenCV Library},
+  publisher = 	 {O'Reilly},
+  year = 	 {2012},
+}
+
+@Misc{SobelZedboard,
+    title = 	 {Sobel Filter Application on the Xilinx Zynq Zedboard - Shakith},
+  howpublished = {\url{http://shakithweblog.blogspot.nl/2012/12/getting-sobel-filter-application.html}},
+  year = 	 {2016},
+  note = 	 {Example},
+}
+
+@Misc{Sobel,
+    title = 	 {Example Sobel Filter in C},
+  howpublished = {\url{http://www.emoticode.net/c/detect-edges-of-an-image-with-sobel-algorithm.html}},
+  year = 	 {2016},
+  note = 	 {Example},
+}
+
+@Misc{Sobel,
+    title = 	 {Plantilla anteproyecto laboratorio ARCO},
+  howpublished = {\url{https://bitbucket.org/arco_group/esi-tfg/src/tip/examples/anteproyecto/}},
+  year = 	 {2015},
+  note = 	 {Example},
+}
+

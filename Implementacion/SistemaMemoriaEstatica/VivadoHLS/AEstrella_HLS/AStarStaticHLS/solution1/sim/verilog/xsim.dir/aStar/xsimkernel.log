@@ -1,0 +1,7 @@
+Running: xsim.dir/aStar/xsimk -maxdeltaid 10000 -simmode gui -wdb aStar.wdb -simrunnum 0 -socket 59959
+Design successfully loaded
+Design Loading Memory Usage: 106124 KB (Peak: 106464 KB)
+Design Loading CPU Usage: 20 ms
+Simulation completed
+Simulation Memory Usage: 183960 KB (Peak: 245396 KB)
+Simulation CPU Usage: 41000 ms

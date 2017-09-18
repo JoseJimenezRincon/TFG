@@ -1,0 +1,5 @@
+   Build using "/home/jose/tfg/Vivado_HLS/2015.4/lnx64/tools/gcc/bin/g++"
+   Compiling aStarStatic.cpp_pre.cpp.tb.cpp
+   Compiling aStartStatic_test.cpp_pre.cpp.tb.cpp
+   Compiling apatb_aStar.cpp
+   Generating cosim.tv.exe

@@ -1,0 +1,284 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'aStar'" level="0">
+<item name = "Date">Fri Jun 30 11:23:20 2017
+</item>
+<item name = "Version">2015.4 (Build 1412921 on Wed Nov 18 09:58:55 AM 2015)</item>
+<item name = "Project">AStarStaticHLS</item>
+<item name = "Solution">solution1</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z020clg484-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing (ns)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00, 8.48, 1.25</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency (clock cycles)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">, min, max, min, max, Type</keys>
+<column name="">?, ?, ?, ?, none</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="7">Instance, Module, min, max, min, max, Type</keys>
+<column name="grp_aStar_adjacentNodes_fu_684">aStar_adjacentNodes, 9, 9, 9, 9, none</column>
+<column name="grp_aStar_calculateCost_fu_696">aStar_calculateCost, 3, 4, 3, 4, none</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- ForinitNodes">6912, 6912, 3, -, -, 2304, no</column>
+<column name="- FOR1">32, 88, 4 ~ 11, -, -, 8, no</column>
+<column name="- FORcalculateBestOption">4608, 4608, 2, -, -, 2304, no</column>
+<column name="- Loop 4">?, ?, 4655 ~ 4719, -, -, ?, no</column>
+<column name=" + FOR2">32, 96, 4 ~ 12, -, -, 8, no</column>
+<column name=" + FORcalculateBestOption">4608, 4608, 2, -, -, 2304, no</column>
+<column name="- Loop 5">?, ?, 4, -, -, ?, no</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="5">Name, BRAM_18K, DSP48E, FF, LUT</keys>
+<column name="DSP">-, -, -, -</column>
+<column name="Expression">-, -, 0, 878</column>
+<column name="FIFO">-, -, -, -</column>
+<column name="Instance">-, -, 328, 910</column>
+<column name="Memory">50, -, 0, 0</column>
+<column name="Multiplexer">-, -, -, 650</column>
+<column name="Register">-, -, 948, -</column>
+<specialColumn name="Available">280, 220, 106400, 53200</specialColumn>
+<specialColumn name="Utilization (%)">17, 0, 1, 4</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="6">Instance, Module, BRAM_18K, DSP48E, FF, LUT</keys>
+<column name="grp_aStar_adjacentNodes_fu_684">aStar_adjacentNodes, 0, 0, 182, 819</column>
+<column name="grp_aStar_calculateCost_fu_696">aStar_calculateCost, 0, 0, 146, 91</column>
+</table>
+</item>
+<item name = "DSP48"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="9">Memory, Module, BRAM_18K, FF, LUT, Words, Bits, Banks, W*Bits*Banks</keys>
+<column name="adjacentPosition_2_U">aStar_adjacentPosition_2, 2, 0, 0, 8, 32, 1, 256</column>
+<column name="adjacentPosition_0_U">aStar_adjacentPosition_2, 2, 0, 0, 8, 32, 1, 256</column>
+<column name="adjacentPosition_1_U">aStar_adjacentPosition_2, 2, 0, 0, 8, 32, 1, 256</column>
+<column name="node_coordinates_0_U">aStar_node_coordinates_0, 2, 0, 0, 2304, 6, 1, 13824</column>
+<column name="node_coordinates_1_U">aStar_node_coordinates_1, 8, 0, 0, 2304, 32, 1, 73728</column>
+<column name="node_father_U">aStar_node_coordinates_1, 8, 0, 0, 2304, 32, 1, 73728</column>
+<column name="node_cost_U">aStar_node_coordinates_1, 8, 0, 0, 2304, 32, 1, 73728</column>
+<column name="node_costPlusHeuristic_U">aStar_node_coordinates_1, 8, 0, 0, 2304, 32, 1, 73728</column>
+<column name="node_heuristic_U">aStar_node_heuristic, 8, 0, 0, 2304, 32, 1, 73728</column>
+<column name="openNodes_U">aStar_openNodes, 1, 0, 0, 2304, 1, 1, 2304</column>
+<column name="node_visited_U">aStar_openNodes, 1, 0, 0, 2304, 1, 1, 2304</column>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="7">Name, BRAM_18K, FF, LUT, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="finalPosition_fu_994_p2">+, 0, 0, 32, 32, 32</column>
+<column name="i_1_fu_793_p2">+, 0, 0, 12, 1, 12</column>
+<column name="i_2_fu_916_p2">+, 0, 0, 4, 4, 1</column>
+<column name="i_3_fu_1052_p2">+, 0, 0, 4, 4, 1</column>
+<column name="i_4_fu_971_p2">+, 0, 0, 12, 12, 1</column>
+<column name="i_5_fu_1120_p2">+, 0, 0, 12, 12, 1</column>
+<column name="position_5_fu_822_p2">+, 0, 0, 32, 32, 32</column>
+<column name="tmp1_fu_948_p2">+, 0, 0, 6, 32, 32</column>
+<column name="tmp2_fu_1097_p2">+, 0, 0, 6, 32, 32</column>
+<column name="tmp_1_i1_fu_1103_p2">+, 0, 0, 6, 32, 32</column>
+<column name="tmp_1_i_fu_954_p2">+, 0, 0, 6, 32, 32</column>
+<column name="tmp_28_fu_866_p2">+, 0, 0, 12, 12, 12</column>
+<column name="tmp_29_fu_876_p2">+, 0, 0, 13, 13, 13</column>
+<column name="tmp_30_fu_1216_p2">+, 0, 0, 6, 13, 13</column>
+<column name="tmp_31_fu_1222_p2">+, 0, 0, 6, 13, 13</column>
+<column name="tmp_32_fu_1261_p2">+, 0, 0, 6, 13, 13</column>
+<column name="tmp_33_fu_1267_p2">+, 0, 0, 6, 13, 13</column>
+<column name="tmp_i1_fu_932_p2">+, 0, 0, 32, 32, 32</column>
+<column name="tmp_i5_fu_1081_p2">+, 0, 0, 32, 32, 32</column>
+<column name="y_fu_827_p2">+, 0, 0, 32, 1, 32</column>
+<column name="grp_fu_708_p2">-, 0, 0, 32, 32, 32</column>
+<column name="grp_fu_713_p2">-, 0, 0, 32, 32, 32</column>
+<column name="grp_fu_743_p2">-, 0, 0, 32, 1, 32</column>
+<column name="grp_fu_763_p2">-, 0, 0, 32, 1, 32</column>
+<column name="bestOption_1_bestOption_i1_fu_1156_p3">Select, 0, 0, 32, 1, 32</column>
+<column name="bestOption_1_bestOption_i_fu_1012_p3">Select, 0, 0, 32, 1, 32</column>
+<column name="bestOption_2_i1_fu_1172_p3">Select, 0, 0, 32, 1, 32</column>
+<column name="bestOption_2_i_fu_1028_p3">Select, 0, 0, 32, 1, 32</column>
+<column name="grp_fu_755_p3">Select, 0, 0, 32, 1, 32</column>
+<column name="grp_fu_775_p3">Select, 0, 0, 32, 1, 32</column>
+<column name="positionBestOption_2_i1_fu_1164_p3">Select, 0, 0, 32, 1, 32</column>
+<column name="positionBestOption_2_i_fu_1020_p3">Select, 0, 0, 32, 1, 32</column>
+<column name="positionBestOption_positionBes_1_fu_1149_p3">Select, 0, 0, 32, 1, 32</column>
+<column name="positionBestOption_positionBes_fu_1005_p3">Select, 0, 0, 32, 1, 32</column>
+<column name="y_1_fu_833_p3">Select, 0, 0, 32, 1, 32</column>
+<column name="exitcond1_fu_910_p2">icmp, 0, 0, 2, 4, 5</column>
+<column name="exitcond_fu_1046_p2">icmp, 0, 0, 2, 4, 5</column>
+<column name="exitcond_i1_fu_965_p2">icmp, 0, 0, 5, 12, 12</column>
+<column name="exitcond_i2_fu_1114_p2">icmp, 0, 0, 5, 12, 12</column>
+<column name="exitcond_i_fu_787_p2">icmp, 0, 0, 5, 12, 12</column>
+<column name="grp_fu_731_p2">icmp, 0, 0, 11, 32, 2</column>
+<column name="grp_fu_749_p2">icmp, 0, 0, 11, 32, 1</column>
+<column name="grp_fu_769_p2">icmp, 0, 0, 11, 32, 1</column>
+<column name="tmp_22_fu_1138_p2">icmp, 0, 0, 11, 32, 32</column>
+<column name="tmp_26_fu_1185_p2">icmp, 0, 0, 11, 32, 2</column>
+<column name="tmp_4_i_fu_799_p2">icmp, 0, 0, 3, 6, 1</column>
+<column name="tmp_5_i_fu_805_p2">icmp, 0, 0, 5, 12, 1</column>
+<column name="tmp_8_i1_fu_1143_p2">icmp, 0, 0, 11, 32, 32</column>
+<column name="tmp_8_i9_fu_999_p2">icmp, 0, 0, 11, 32, 32</column>
+<column name="tmp_9_i_fu_896_p2">icmp, 0, 0, 11, 32, 1</column>
+<column name="grp_fu_737_p2">or, 0, 0, 1, 1, 1</column>
+<column name="or_cond_i_fu_811_p2">or, 0, 0, 1, 1, 1</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="adjacentPosition_0_address0">3, 4, 3, 12</column>
+<column name="adjacentPosition_0_ce0">1, 3, 1, 3</column>
+<column name="adjacentPosition_0_ce1">1, 2, 1, 2</column>
+<column name="adjacentPosition_0_we0">1, 2, 1, 2</column>
+<column name="adjacentPosition_0_we1">1, 2, 1, 2</column>
+<column name="adjacentPosition_1_address0">3, 4, 3, 12</column>
+<column name="adjacentPosition_1_ce0">1, 3, 1, 3</column>
+<column name="adjacentPosition_1_ce1">1, 2, 1, 2</column>
+<column name="adjacentPosition_1_we0">1, 2, 1, 2</column>
+<column name="adjacentPosition_1_we1">1, 2, 1, 2</column>
+<column name="adjacentPosition_2_address0">3, 4, 3, 12</column>
+<column name="adjacentPosition_2_ce0">1, 3, 1, 3</column>
+<column name="adjacentPosition_2_ce1">1, 2, 1, 2</column>
+<column name="adjacentPosition_2_we0">1, 2, 1, 2</column>
+<column name="adjacentPosition_2_we1">1, 2, 1, 2</column>
+<column name="ap_NS_fsm">60, 33, 1, 33</column>
+<column name="bestOption_i1_reg_663">32, 2, 32, 64</column>
+<column name="bestOption_i_reg_605">32, 2, 32, 64</column>
+<column name="grp_aStar_adjacentNodes_fu_684_x">32, 3, 32, 96</column>
+<column name="grp_aStar_adjacentNodes_fu_684_y">32, 3, 32, 96</column>
+<column name="grp_aStar_calculateCost_fu_696_i">4, 3, 4, 12</column>
+<column name="i1_reg_627">4, 2, 4, 8</column>
+<column name="i_i_reg_558">12, 2, 12, 24</column>
+<column name="i_reg_570">4, 2, 4, 8</column>
+<column name="map_r_address0">12, 4, 12, 48</column>
+<column name="map_r_d0">32, 3, 32, 96</column>
+<column name="node_coordinates_0_address0">12, 5, 12, 60</column>
+<column name="node_coordinates_1_address0">12, 5, 12, 60</column>
+<column name="node_costPlusHeuristic_address0">12, 6, 12, 72</column>
+<column name="node_costPlusHeuristic_d0">32, 4, 32, 128</column>
+<column name="node_cost_address0">12, 5, 12, 60</column>
+<column name="node_cost_ce0">1, 3, 1, 3</column>
+<column name="node_cost_d0">32, 3, 32, 96</column>
+<column name="node_cost_we0">1, 3, 1, 3</column>
+<column name="node_father_address0">12, 6, 12, 72</column>
+<column name="node_father_ce0">1, 3, 1, 3</column>
+<column name="node_father_d0">32, 4, 32, 128</column>
+<column name="node_heuristic_address0">12, 4, 12, 48</column>
+<column name="node_heuristic_d0">32, 4, 32, 128</column>
+<column name="node_visited_address0">24, 8, 12, 96</column>
+<column name="node_visited_d0">1, 3, 1, 3</column>
+<column name="openNodes_address0">24, 8, 12, 96</column>
+<column name="openNodes_d0">1, 3, 1, 3</column>
+<column name="position3_reg_617">32, 2, 32, 64</column>
+<column name="positionBestOption_1_reg_639">12, 2, 12, 24</column>
+<column name="positionBestOption_reg_582">12, 2, 12, 24</column>
+<column name="position_1_reg_675">32, 2, 32, 64</column>
+<column name="y_i_reg_546">32, 2, 32, 64</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="ap_CS_fsm">32, 0, 32, 0</column>
+<column name="bestOption_i1_reg_663">32, 0, 32, 0</column>
+<column name="bestOption_i_reg_605">32, 0, 32, 0</column>
+<column name="extLd_reg_1462">6, 0, 32, 26</column>
+<column name="finalPosition_reg_1426">32, 0, 32, 0</column>
+<column name="grp_aStar_adjacentNodes_fu_684_ap_start_ap_start_reg">1, 0, 1, 0</column>
+<column name="grp_aStar_calculateCost_fu_696_ap_start_ap_start_reg">1, 0, 1, 0</column>
+<column name="i1_reg_627">4, 0, 4, 0</column>
+<column name="i_1_reg_1314">12, 0, 12, 0</column>
+<column name="i_2_reg_1347">4, 0, 4, 0</column>
+<column name="i_3_reg_1470">4, 0, 4, 0</column>
+<column name="i_4_reg_1411">12, 0, 12, 0</column>
+<column name="i_5_reg_1534">12, 0, 12, 0</column>
+<column name="i_i_reg_558">12, 0, 12, 0</column>
+<column name="i_reg_570">4, 0, 4, 0</column>
+<column name="node_coordinates_0_addr_1_reg_1442">12, 0, 12, 0</column>
+<column name="node_coordinates_0_load_reg_1452">6, 0, 6, 0</column>
+<column name="node_coordinates_1_addr_reg_1447">12, 0, 12, 0</column>
+<column name="node_coordinates_1_load_reg_1457">32, 0, 32, 0</column>
+<column name="or_cond1_reg_1500">1, 0, 1, 0</column>
+<column name="or_cond_i_reg_1319">1, 0, 1, 0</column>
+<column name="or_cond_reg_1377">1, 0, 1, 0</column>
+<column name="position3_reg_617">32, 0, 32, 0</column>
+<column name="positionBestOption_1_reg_639">12, 0, 12, 0</column>
+<column name="positionBestOption_i11_cast_reg_1526">12, 0, 32, 20</column>
+<column name="positionBestOption_i_cast_reg_1403">12, 0, 32, 20</column>
+<column name="positionBestOption_reg_582">12, 0, 12, 0</column>
+<column name="position_1_reg_675">32, 0, 32, 0</column>
+<column name="position_3_reg_593">32, 0, 32, 0</column>
+<column name="position_4_reg_650">32, 0, 32, 0</column>
+<column name="position_5_reg_1324">32, 0, 32, 0</column>
+<column name="position_reg_1573">32, 0, 32, 0</column>
+<column name="reg_718">32, 0, 32, 0</column>
+<column name="reg_723">32, 0, 32, 0</column>
+<column name="reg_727">32, 0, 32, 0</column>
+<column name="tmp_17_reg_1352">4, 0, 64, 60</column>
+<column name="tmp_18_reg_1363">64, 0, 64, 0</column>
+<column name="tmp_21_reg_1475">4, 0, 64, 60</column>
+<column name="tmp_23_reg_1486">64, 0, 64, 0</column>
+<column name="tmp_25_reg_1562">64, 0, 64, 0</column>
+<column name="tmp_33_reg_1591">13, 0, 13, 0</column>
+<column name="tmp_i1_reg_1391">32, 0, 32, 0</column>
+<column name="tmp_i5_reg_1514">32, 0, 32, 0</column>
+<column name="x_reg_1304">6, 0, 6, 0</column>
+<column name="y_1_reg_1330">32, 0, 32, 0</column>
+<column name="y_i_reg_546">32, 0, 32, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_hs, aStar, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, aStar, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, aStar, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, aStar, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, aStar, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, aStar, return value</column>
+<column name="ap_return">out, 32, ap_ctrl_hs, aStar, return value</column>
+<column name="xStart">in, 32, ap_none, xStart, scalar</column>
+<column name="yStart">in, 32, ap_none, yStart, scalar</column>
+<column name="xFinish">in, 32, ap_none, xFinish, scalar</column>
+<column name="yFinish">in, 32, ap_none, yFinish, scalar</column>
+<column name="map_r_address0">out, 12, ap_memory, map_r, array</column>
+<column name="map_r_ce0">out, 1, ap_memory, map_r, array</column>
+<column name="map_r_we0">out, 1, ap_memory, map_r, array</column>
+<column name="map_r_d0">out, 32, ap_memory, map_r, array</column>
+<column name="map_r_q0">in, 32, ap_memory, map_r, array</column>
+</table>
+</item>
+</section>
+</profile>

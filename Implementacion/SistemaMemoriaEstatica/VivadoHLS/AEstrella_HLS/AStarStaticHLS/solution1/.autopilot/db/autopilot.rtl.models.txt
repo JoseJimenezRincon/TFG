@@ -1,0 +1,8 @@
+aStar_openNodes
+aStar_node_coordinates_0
+aStar_node_coordinates_1
+aStar_node_heuristic
+aStar_adjacentPosition_2
+aStar_adjacentNodes
+aStar_calculateCost
+aStar
